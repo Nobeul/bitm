@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <title>Calculator Using JavaScript</title>
-
 </head>
 
 <body>
@@ -16,22 +15,47 @@
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
+                <p style="font-size: large;">Calculator</p>
                 <div class="row">
+
                     <label for="firstNumber">First Number</label>
-                    <input type="text" class="form-control" id="firstNumber" placeholder="Enter First Number">
+                    <input type="text" class="form-control" id="firstNumber" placeholder="Enter First Number" />
                 </div>
                 <div class="row">
                     <label for="lastNumber">Last Number</label>
-                    <input type="text" class="form-control" id="lastNumber" placeholder="Enter Last Number">
+                    <input type="text" class="form-control" id="lastNumber" placeholder="Enter Last Number" />
                 </div>
                 <div class="row">
-                    <input type="submit" class="btn btn-warning" style="margin: 20px;" id="addition" value="+">
-                    <input type="submit" class="btn btn-warning" style="margin: 20px;" id="subtraction" value="-">
-                    <input type="submit" class="btn btn-warning" style="margin: 20px;" id="multiplication" value="*">
-                    <input type="submit" class="btn btn-warning" style="margin: 20px;" id="division" value="/">
+                    <input type="submit" class="btn btn-warning" style="margin: 20px;" id="addition" value="+" />
+                    <input type="submit" class="btn btn-warning" style="margin: 20px;" id="subtraction" value="-" />
+                    <input type="submit" class="btn btn-warning" style="margin: 20px;" id="multiplication" value="*" />
+                    <input type="submit" class="btn btn-warning" style="margin: 20px;" id="division" value="/" />
                 </div>
                 <div class="row">
-                    <input type="text" class="form-control" id="result" placeholder="Result will be shown here">
+                    <input type="text" class="form-control" id="result" placeholder="Result will be shown here" />
+                </div>
+            </div>
+        </div>
+        <div style="margin: 80px;"></div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p style="font-size: large;">Name adding system</p>
+                <div class="row">
+                    <label for="firstNumber">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" />
+                </div>
+                <div class="row">
+                    <label for="lastNumber">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" />
+                </div>
+                <div class="row">
+                    <input type="submit" class="btn btn-warning" style="margin: 20px;" id="submit"
+                        value="Make my full name" />
+
+                </div>
+                <div class="row">
+                    <input type="text" class="form-control" id="fullName" placeholder="Result will be shown here" />
                 </div>
             </div>
         </div>
@@ -83,36 +107,50 @@
     <!-- Simple calculator using jQuery -->
     <script>
         //For addition
-        $('#addition').click(function () {
-            var firstNumber = Number($('#firstNumber').val());
-            var lastNumber = Number($('#lastNumber').val());
+        $("#addition").click(function () {
+            var firstNumber = Number($("#firstNumber").val());
+            var lastNumber = Number($("#lastNumber").val());
             var result = firstNumber + lastNumber;
 
-            $('#result').val(result);
+            $("#result").val(result);
         });
         //For subtraction
-        $('#subtraction').click(function () {
-            var firstNumber = Number($('#firstNumber').val());
-            var lastNumber = Number($('#lastNumber').val());
+        $("#subtraction").click(function () {
+            var firstNumber = Number($("#firstNumber").val());
+            var lastNumber = Number($("#lastNumber").val());
             var result = firstNumber - lastNumber;
 
-            $('#result').val(result);
+            $("#result").val(result);
         });
         //For multiplication
-        $('#addition').click(function () {
-            var firstNumber = Number($('#firstNumber').val());
-            var lastNumber = Number($('#lastNumber').val());
+        $("#multiplication").click(function () {
+            var firstNumber = Number($("#firstNumber").val());
+            var lastNumber = Number($("#lastNumber").val());
             var result = firstNumber * lastNumber;
 
-            $('#result').val(result);
+            $("#result").val(result);
         });
         //For division
-        $('#division').click(function () {
-            var firstNumber = Number($('#firstNumber').val());
-            var lastNumber = Number($('#lastNumber').val());
+        $("#division").click(function () {
+            var firstNumber = Number($("#firstNumber").val());
+            var lastNumber = Number($("#lastNumber").val());
             var result = firstNumber / lastNumber;
 
-            $('#result').val(result);
+            $("#result").val(result);
+        });
+        // $('#submit').click(function () {
+        //     var firstName = $('#firstName').val();
+        //     var lastName = $('#lastName').val();
+        //     var fullName = firstName + '' + lastName;
+        //     $('#fullName').val(fullName);
+
+        // });
+        $("#submit").click(function () {
+            var firstName = $("#firstName").val();
+            var lastName = $("#lastName").val();
+            var result = firstName + ' ' + lastName;
+
+            $("#fullName").val(result);
         });
     </script>
 </body>
