@@ -82,10 +82,35 @@
     </script> -->
     <!-- Simple calculator using jQuery -->
     <script>
+        //For addition
         $('#addition').click(function () {
             var firstNumber = Number($('#firstNumber').val());
             var lastNumber = Number($('#lastNumber').val());
             var result = firstNumber + lastNumber;
+
+            $('#result').val(result);
+        });
+        //For subtraction
+        $('#subtraction').click(function () {
+            var firstNumber = Number($('#firstNumber').val());
+            var lastNumber = Number($('#lastNumber').val());
+            var result = firstNumber - lastNumber;
+
+            $('#result').val(result);
+        });
+        //For multiplication
+        $('#addition').click(function () {
+            var firstNumber = Number($('#firstNumber').val());
+            var lastNumber = Number($('#lastNumber').val());
+            var result = firstNumber * lastNumber;
+
+            $('#result').val(result);
+        });
+        //For division
+        $('#division').click(function () {
+            var firstNumber = Number($('#firstNumber').val());
+            var lastNumber = Number($('#lastNumber').val());
+            var result = firstNumber / lastNumber;
 
             $('#result').val(result);
         });
