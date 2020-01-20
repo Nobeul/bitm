@@ -46,7 +46,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
     <!-- simple calculator using JS -->
-    <script>
+    <!-- <script>
         // for addition
         document.getElementById('addition').onclick = function () {
             var firstNumber = Number(document.getElementById('firstNumber').value);
@@ -79,6 +79,16 @@
             document.getElementById('result').value = result;
 
         }
+    </script> -->
+    <!-- Simple calculator using jQuery -->
+    <script>
+        $('#addition').click(function () {
+            var firstNumber = Number($('#firstNumber').val());
+            var lastNumber = Number($('#lastNumber').val());
+            var result = firstNumber + lastNumber;
+
+            $('#result').val(result);
+        });
     </script>
 </body>
 
