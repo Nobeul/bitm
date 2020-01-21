@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 16.66%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+
+
+/* For all col */
+[class*='col-'] {
+    float: left;
+    border: solid gray;
+
+}
+
+.row:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.wrapper {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+
+
+/* Height Content */
+
+.header-height {
+    height: 200px;
+}
+
+.menu-height {
+    height: 50px;
+}
+
+.content-height {
+    height: 600px;
+}
+
+.big-footer-height {
+    height: 250px;
+}
+
+.footer-height {
+    height: 40px;
+}
+
+/* Menu  Content */
+.main-ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.main-ul li {
+    float: left;
+    width: 120px;
+    border: 1px solid gray;
+}
+
+.main-ul li a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    height: 44px;
+    padding-top: 15px;
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+.main-ul li a:hover {
+    background-color: white;
+    color: #000;
+}
+
+.div-one {
+    height: 200px;
+    width: 400px;
+    /* background-color: burlywood; */
+    margin: 50px 0 0 50px;
+    float: left;
+    /* background: linear-gradient(to left, red, green, red); */
+    animation: bitm;
+    /* transform: scale(1); */
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes bitm {
+    0% {
+        background: url("../images/image1.jpg");
+    }
+
+    25% {
+        background: url("../images/image2.jpg");
+    }
+
+    50% {
+        background: url("../images/image3.jpg");
+    }
+
+    75% {
+        background: url("../images/image4.jpg");
+    }
+
+    100% {
+        background: url("../images/image5.jpg");
+    }
+}
