@@ -8,6 +8,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <title>Calculator Using JavaScript</title>
+    <style>
+        .images {
+            margin-bottom: 60px;
+            margin-top: 60px;
+
+        }
+
+        #mainImage {
+            height: 500px;
+            width: 590px;
+        }
+
+        .subImage img {
+            margin: 20px 5px 0 0;
+            height: 70px;
+            width: 141px;
+        }
+    </style>
 </head>
 
 <body>
@@ -60,6 +78,22 @@
             </div>
         </div>
     </div>
+    <div class="images">
+        <div class="container">
+            <div class="image">
+                <img id="mainImage" src="assets/img2.jpg" alt="">
+            </div>
+            <div class="subImage">
+                <img id="img3" src="assets/img3.jpg" alt="">
+                <img id="img4" src="assets/img4.jpg" alt="">
+                <img id="img5" src="assets/img5.jpg" alt="">
+                <img id="img6" src="assets/img6.jpg" alt="">
+
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
@@ -138,19 +172,32 @@
 
             $("#result").val(result);
         });
-        // $('#submit').click(function () {
-        //     var firstName = $('#firstName').val();
-        //     var lastName = $('#lastName').val();
-        //     var fullName = firstName + '' + lastName;
-        //     $('#fullName').val(fullName);
 
-        // });
         $("#submit").click(function () {
             var firstName = $("#firstName").val();
             var lastName = $("#lastName").val();
             var result = firstName + ' ' + lastName;
 
             $("#fullName").val(result);
+        });
+
+
+        //For images 
+        $('#img3').click(function () {
+            var img3 = $(this).attr('src');
+            $('#mainImage').attr('src', img3);
+        });
+        $('#img4').click(function () {
+            var img4 = $(this).attr('src');
+            $('#mainImage').attr('src', img4);
+        });
+        $('#img5').click(function () {
+            var img5 = $(this).attr('src');
+            $('#mainImage').attr('src', img5);
+        });
+        $('#img6').click(function () {
+            var img6 = $(this).attr('src');
+            $('#mainImage').attr('src', img6);
         });
     </script>
 </body>
