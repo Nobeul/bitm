@@ -15,16 +15,16 @@
     <div class="container">
 
         <div class="frm" style="margin-top: 30px;">
-            <form action="" method="POST">
+            <form action="" method="GET">
                 <div class="form-group">
                     <label for="exampleInputName">Username</label>
                     <input type="text" class="form-control" id="username" placeholder="Enter your name">
-                    <span id='nameError'></span>
+                    <span id='nameError' style="color: red;"></span>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputphone">Phone</label>
                     <input type="number" class="form-control" id="phone" placeholder="Enter your phone">
-                    <span id="phoneError"></span>
+                    <span id="phoneError" style="color: red;"></span>
                 </div>
 
                 <button type="submit" id="submit" class="btn btn-primary">Submit</button>
@@ -50,7 +50,7 @@
             if (nameLength >= 3 && nameLength <= 20) {
                 $('#nameError').text('');
             } else {
-                $('#nameError').text('name can be within 3 to 20 characters');
+                $('#nameError').text('Name can be within 3 to 20 characters');
             }
         }
 
