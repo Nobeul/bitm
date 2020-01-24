@@ -53,7 +53,7 @@ if(isset($_POST['submit'])){
                         </ul>
                     </li>
     <div class="type" id="Action">
-        <h3>Schema for Action</h3>
+        <h3>Schema for Organization</h3>
         <div class="frm">
         <form action="" method="POST">
             <div class="form-group">
