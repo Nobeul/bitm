@@ -60,12 +60,46 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         </div>
+        <div class="type">
+            <h3>Schema for Action</h3>
+            <div class="frm">
+                <form action="" method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputName">Agent Name</label>
+                        <input type="text" class="form-control" name="agentname" placeholder="Enter agent name">
+                        <span id='nameError' style="color: red;"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputphone">Result</label>
+                        <input type="text" class="form-control" name="result" placeholder="Enter result">
+                        <span id="phoneError" style="color: red;"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputphone">Participant</label>
+                        <input type="text" class="form-control" name="participant" placeholder="Enter participant name">
+                        <span id="phoneError" style="color: red;"></span>
+                    </div>
 
+                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
 
     </div>
+    <!-- <div class="output">
+        <div class="container" style="height: 500px; width: 500px; background: grey">
+            <h4><u>Output</u></h4>
+            <p style="color: white"><?php echo $encodedValue ?> </p>
+        </div>
+    </div> -->
 
 
-
+    <div class="container" style="margin-top: 20px">
+        <div>
+            <h4><u>Output</u></h4>
+            <p><?php echo $encodedValue ?> </p>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
