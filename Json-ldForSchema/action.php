@@ -47,15 +47,21 @@ if (isset($_POST['submit'])) {
 
     <div class="container">
         <h3>Choose type</h3>
-        <li class="dropdown"><a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Choose Type</a>
-            <ul class="dropdown-menu bg-primary">
-                <li><a href="json.php" class="nav-link">Action</a></li>
-                <li><a href="aggregateRating.php" class="nav-link">Aggregate Rating</a></li>
-                <li><a href="organization.php" class="nav-link">Organization</a></li>
-            </ul>
-        </li>
-        <div class="type" id="Action">
-            <h3>Schema for Aggregate Rating</h3>
+        <div class="input-group">
+            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="action.php">Action</a>
+                    <a class="dropdown-item" href="organization.php">Organization</a>
+                    <a class="dropdown-item" href="aggregateRating.php">Aggregate Rating</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="type">
+            <h3>Schema for Action</h3>
             <div class="frm">
                 <form action="" method="POST">
                     <div class="form-group">
@@ -80,14 +86,20 @@ if (isset($_POST['submit'])) {
         </div>
 
     </div>
-
-    <div class="output">
+    <!-- <div class="output">
         <div class="container" style="height: 500px; width: 500px; background: grey">
             <h4><u>Output</u></h4>
             <p style="color: white"><?php echo $encodedValue ?> </p>
         </div>
-    </div>
+    </div> -->
 
+
+    <div class="container" style="margin-top: 20px">
+        <div>
+            <h4><u>Output</u></h4>
+            <p><?php echo $encodedValue ?> </p>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
