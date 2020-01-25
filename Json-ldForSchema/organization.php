@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
             'telephone' => $telephone,
             'contactType' => $contactType,
             'contactOption' => $contactOption,
-            'areaServed'      => $areaServed
+            'areaServed' => $areaServed
         )
     );
     $encodedValue =  json_encode($organization);
@@ -32,7 +32,6 @@ if (isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 
 <head>
     <meta charset="UTF-8">
@@ -47,30 +46,47 @@ if (isset($_POST['submit'])) {
 
     <div class="container">
         <h3>Choose type</h3>
-        <li class="dropdown"><a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Choose Type</a>
-            <ul class="dropdown-menu bg-primary">
-                <li><a href="json.php" class="nav-link">Action</a></li>
-                <li><a href="aggregateRating.php" class="nav-link">Aggregate Rating</a></li>
-                <li><a href="organization.php" class="nav-link">Organization</a></li>
-            </ul>
-        </li>
-        <div class="type" id="Action">
+        <div class="input-group">
+            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="action.php">Action</a>
+                    <a class="dropdown-item" href="organization.php">Organization</a>
+                    <a class="dropdown-item" href="aggregateRating.php">Aggregate Rating</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="type">
             <h3>Schema for Organization</h3>
             <div class="frm">
                 <form action="" method="POST">
                     <div class="form-group">
-                        <label for="exampleInputName">Agent Name</label>
-                        <input type="text" class="form-control" name="agentname" placeholder="Enter agent name">
+                        <label for="exampleInputName">URL</label>
+                        <input type="text" class="form-control" name="url" placeholder="Enter url">
                         <span id='nameError' style="color: red;"></span>
                     </div>
+                    <h4>Contact Point</h4>
                     <div class="form-group">
-                        <label for="exampleInputphone">Result</label>
-                        <input type="text" class="form-control" name="result" placeholder="Enter result">
+                        <label for="exampleInputphone">Telephone</label>
+                        <input type="text" class="form-control" name="telephone" placeholder="Enter telephone">
                         <span id="phoneError" style="color: red;"></span>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputphone">Participant</label>
-                        <input type="text" class="form-control" name="participant" placeholder="Enter participant name">
+                        <label for="exampleInputphone">Contact Type</label>
+                        <input type="text" class="form-control" name="contactType" placeholder="Enter contact type">
+                        <span id="phoneError" style="color: red;"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputphone">Contact Option</label>
+                        <input type="text" class="form-control" name="contactOption" placeholder="Enter contact option">
+                        <span id="phoneError" style="color: red;"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputphone">Area Served</label>
+                        <input type="text" class="form-control" name="areaServed" placeholder="Enter contact type">
                         <span id="phoneError" style="color: red;"></span>
                     </div>
 
@@ -80,16 +96,22 @@ if (isset($_POST['submit'])) {
         </div>
 
     </div>
-
-    <div class="output">
+    <!-- <div class="output">
         <div class="container" style="height: 500px; width: 500px; background: grey">
             <h4><u>Output</u></h4>
             <p style="color: white"><?php echo $encodedValue ?> </p>
         </div>
+    </div> -->
+
+
+    <div class="container" style="margin-top: 20px">
+        <div>
+            <h4><u>Output</u></h4>
+            <p><?php echo $encodedValue ?> </p>
+        </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"=======<body>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
@@ -97,12 +119,6 @@ if (isset($_POST['submit'])) {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-<<<<<<< HEAD
 </body>
 
 </html>
-
-</html>
-=======
-</body>
->>>>>>> master
