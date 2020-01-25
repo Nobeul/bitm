@@ -1,32 +1,33 @@
 <?php
 $context = 'http://schema.org';
-$type = 'Organization';
+$type = 'CreateAction';
 
 $encodedValue = '';
 
 if (isset($_POST['submit'])) {
-    $organization = array();
-    $url = $_POST['url'];
-    $telephone = $_POST['telephone'];
-    $contactType = $_POST['contactType'];
-    $contactOption = $_POST['contactOption'];
-    $areaServed = $_POST['areaServed'];
+    $action = array();
+    $agentname = $_POST['agentname'];
+    $result = $_POST['result'];
+    $participant = $_POST['participant'];
 
 
-
-    $organization = array(
+    $action = array(
         '@context' => $context,
         '@type' => $type,
-        'url' => $url,
-        'contactPoint' => array(
-            '@type' => 'ContactPoint',
-            'telephone' => $telephone,
-            'contactType' => $contactType,
-            'contactOption' => $contactOption,
-            'areaServed' => $areaServed
+        'agent' => array(
+            '@type' => 'Person',
+            'name' => $agentname
+        ),
+        'result' => array(
+            '@type' => 'ExercisePlan',
+            'name' => $result
+        ),
+        'participant' => array(
+            '@type' => 'Person',
+            'name' => $participant
         )
     );
-    $encodedValue =  json_encode($organization);
+    $encodedValue =  json_encode($action);
 }
 ?>
 
@@ -60,33 +61,22 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
         <div class="type">
-            <h3>Schema for Organization</h3>
+            <h3>Schema for Action</h3>
             <div class="frm">
                 <form action="" method="POST">
                     <div class="form-group">
-                        <label for="exampleInputName">URL</label>
-                        <input type="text" class="form-control" name="url" placeholder="Enter url">
+                        <label for="exampleInputName">Agent Name</label>
+                        <input type="text" class="form-control" name="agentname" placeholder="Enter agent name">
                         <span id='nameError' style="color: red;"></span>
                     </div>
-                    <h4>Contact Point</h4>
                     <div class="form-group">
-                        <label for="exampleInputphone">Telephone</label>
-                        <input type="text" class="form-control" name="telephone" placeholder="Enter telephone">
+                        <label for="exampleInputphone">Result</label>
+                        <input type="text" class="form-control" name="result" placeholder="Enter result">
                         <span id="phoneError" style="color: red;"></span>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputphone">Contact Type</label>
-                        <input type="text" class="form-control" name="contactType" placeholder="Enter contact type">
-                        <span id="phoneError" style="color: red;"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputphone">Contact Option</label>
-                        <input type="text" class="form-control" name="contactOption" placeholder="Enter contact option">
-                        <span id="phoneError" style="color: red;"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputphone">Area Served</label>
-                        <input type="text" class="form-control" name="areaServed" placeholder="Enter contact type">
+                        <label for="exampleInputphone">Participant</label>
+                        <input type="text" class="form-control" name="participant" placeholder="Enter participant name">
                         <span id="phoneError" style="color: red;"></span>
                     </div>
 
